@@ -1,7 +1,7 @@
 {
 	"name": "@sheetbase/auth-api-key-server",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Sheetbase middleware to authorize with the API Key.",
 	"author": "Sheetbase",
 	"homepage": "https://sheetbase.net",
@@ -20,7 +20,7 @@
 		"url": "https://github.com/sheetbase/module-auth-api-key-server/issues"
 	},
 	"peerDependencies": {
-		"@sheetbase/core-server": "0.0.1"
+		"@sheetbase/core-server": "0.0.2"
 	},
 	"devDependencies": {
 		"@types/google-apps-script": "0.0.28"

@@ -3,7 +3,7 @@ const require = require || (() => {return {}});
  * 
  * Name: @sheetbase/auth-api-key-server
  * Description: Sheetbase middleware to authorization with API Key.
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Sheetbase
  * Homepage: https://sheetbase.net
  * License: MIT
