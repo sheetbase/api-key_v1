@@ -62,9 +62,9 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="sheetbase-module-sheetbase-auth-api-key-server">Sheetbase Module: @sheetbase/auth-api-key-server</h1>
 				<p>Sheetbase middleware to authorize with the API Key.</p>
-				<!-- <content> -->
+				<!-- <block:header> -->
 				<p><a href="https://github.com/sheetbase/module-auth-api-key-server/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="License"></a> <a href="https://github.com/google/clasp"><img src="https://img.shields.io/badge/built%20with-clasp-4285f4.svg" alt="clasp"></a> <a href="https://www.patreon.com/lamnhan"><img src="https://ionicabizau.github.io/badges/patreon.svg" alt="Support me on Patreon"></a> <a href="https://www.paypal.me/lamnhan"><img src="https://ionicabizau.github.io/badges/paypal_donate.svg" alt="PayPal"></a> <a href="https://m.me/sheetbase"><img src="https://img.shields.io/badge/ask/me-anything-1abc9c.svg" alt="Ask me anything"></a></p>
-				<!-- </content> -->
+				<!-- </block:header> -->
 				<h2 id="install">Install</h2>
 				<ul>
 					<li><p>Using npm: <code>npm install --save @sheetbase/auth-api-key-server</code></p>
@@ -75,12 +75,6 @@
 				</ul>
 				<h2 id="examples">Examples</h2>
 				<pre><code class="language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">example1</span>(<span class="hljs-params"></span>): <span class="hljs-title">void</span> </span>{
-  <span class="hljs-comment">// add this line when use the library</span>
-  AuthApiKey.provide(Sheetbase);
-
-  <span class="hljs-comment">// for demonstration</span>
-  <span class="hljs-keyword">const</span> apiKey = <span class="hljs-string">"my_api_key"</span>;
-  Sheetbase.Config.set({ apiKey });
   <span class="hljs-comment">// verify</span>
   <span class="hljs-keyword">const</span> aye: <span class="hljs-built_in">boolean</span> = AuthApiKey.verify(apiKey);
   <span class="hljs-keyword">const</span> nay: <span class="hljs-built_in">boolean</span> = AuthApiKey.verify(<span class="hljs-string">"not_my_api_key"</span>);
@@ -89,30 +83,34 @@
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">example2</span>(<span class="hljs-params"></span>): <span class="hljs-title">void</span> </span>{
-  <span class="hljs-comment">// add this line when use the library</span>
-  AuthApiKey.provide(Sheetbase);
-
-  <span class="hljs-comment">// using with Sheetbase Router</span>
-  Sheetbase.Router.get(<span class="hljs-string">"/auth"</span>, AuthApiKey.middleware, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
-    res.send(<span class="hljs-string">"I have it!"</span>);
-  });
-  <span class="hljs-comment">// or</span>
-  Sheetbase.Router.use(AuthApiKey.middleware);
+  Logger.log(<span class="hljs-string">"Not executable example."</span>);
+  <span class="hljs-comment">/**
+ * using with Sheetbase Router
+ * 
+    Sheetbase.Router.get('/auth', AuthApiKey.middleware, (req, res) =&gt; {
+        res.send('I have it!');
+    });
+ *
+*/</span>
 }</code></pre>
 				<h2 id="documentation">Documentation</h2>
 				<p>See the docs: <a href="https://sheetbase.github.io/module-auth-api-key-server">https://sheetbase.github.io/module-auth-api-key-server</a></p>
 				<h2 id="api">API</h2>
-				<p>An overview of the API, for detail please refer <a href="https://sheetbase.github.io/module-auth-api-key-server">the documentation</a></p>
+				<p>An overview of the API, for detail please refer <a href="https://sheetbase.github.io/module-auth-api-key-server">the documentation</a>.</p>
 				<h3 id="authapikey">AuthApiKey</h3>
 				<pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> IModule {
-  provide(Sheetbase: ISheetbaseModule): IModule;
+  init(options: IOptions);
   verify(key: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">boolean</span>;
-  middleware(req: IHttpRequest, res: IResponse, next: IHttpNext): IHttpHandler;
+  middleware(
+    req: IRouteRequest,
+    res: IRouteResponse,
+    next: IRouteNext
+  ): IRouteHandler;
 }</code></pre>
 				<h2 id="license">License</h2>
 				<p><strong>@sheetbase/auth-api-key-server</strong> is released under the <a href="https://github.com/sheetbase/module-auth-api-key-server/blob/master/LICENSE">MIT</a> license.</p>
-				<!-- <footer> -->
-				<!-- </footer> -->
+				<!-- <block:footer> -->
+				<!-- </block:footer> -->
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -131,8 +129,17 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/imodule.html" class="tsd-kind-icon">IModule</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/ioptions.html" class="tsd-kind-icon">IOptions</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#authapikeymodule" class="tsd-kind-icon">Auth<wbr>Api<wbr>Key<wbr>Module</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#moduleexports" class="tsd-kind-icon">module<wbr>Exports</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#options" class="tsd-kind-icon">options</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#example1" class="tsd-kind-icon">example1</a>

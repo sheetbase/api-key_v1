@@ -1,13 +1,5 @@
 {
   "timeZone": "Asia/Bangkok",
-  "dependencies": {
-	"libraries": [
-		{
-		  "userSymbol": "Sheetbase",
-		  "libraryId": "1bhE_YkXnzZLr9hZk_5NXgCY6bAe73UHIGjM4dvyRJLLTyccpu5vS6jeJ",
-		  "version": "4"
-		}
-	]
-  },
+  "dependencies": {},
   "exceptionLogging": "STACKDRIVER"
 }

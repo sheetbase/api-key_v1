@@ -1,34 +1,37 @@
-import { IHttpRequest, IResponse, IHttpNext, IHttpHandler } from '@sheetbase/core-server';
-import { IModule as ISheetbaseModule } from '@sheetbase/core-server';
+import { IRouteRequest, IRouteResponse, IRouteNext, IRouteHandler } from '@sheetbase/core-server';
+
+import { IModule, IOptions } from '../index';
 
 export class AuthApiKey {
-    private _Sheetbase: ISheetbaseModule;
+    private _options: IOptions = {
+        apiKey: null
+    };
 
-    constructor() {
-        var proccess = proccess || {};
-        const Sheetbase: ISheetbaseModule = proccess['Sheetbase'];
-        this._Sheetbase = Sheetbase;
+    constructor(options: IOptions) {
+        this.init(options);
     }
-    
-    provide(Sheetbase: ISheetbaseModule) {
-        this._Sheetbase = Sheetbase;
+
+    init(options: IOptions): IModule {
+        this._options = options;
         return this;
     }
 
     verify(key: string): boolean {
-        return (this._Sheetbase.Config.get('apiKey') === key);
+        return (this._options.apiKey === key);
     }
 
-    middleware(req: IHttpRequest, res: IResponse, next: IHttpNext): IHttpHandler {
-        var apiKey = req.body['apiKey'] || req.params['apiKey'];
-        if (this._Sheetbase.Config.get('apiKey') !== apiKey) {
-            try {
-                return res.render('errors/403');
-            } catch (error) {
-                return res.html(`
-                    <h1>403!</h1>
-                    <p>Unauthorized.</p>
-                `);
+    middleware(req: IRouteRequest, res: IRouteResponse, next: IRouteNext): IRouteHandler {
+        var apiKey = req.body.apiKey || req.query.apiKey;
+        if (!this.verify(apiKey)) {
+            const failure = this._options.failure;
+            if (!!(failure && failure.constructor && failure.call && failure.apply)) {
+                return failure(req, res);
+            } else {
+                try {
+                    return res.render('errors/403');
+                } catch (error) {
+                    return res.html('<h1>403!</h1><p>Unauthorized.</p>');
+                }
             }
         }
         return next();

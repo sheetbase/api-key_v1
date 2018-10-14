@@ -1,13 +1,12 @@
 {
 	"name": "@sheetbase/auth-api-key-server",
-	"type": "module",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Sheetbase middleware to authorize with the API Key.",
 	"author": "Sheetbase",
 	"homepage": "https://sheetbase.net",
 	"license": "MIT",
 	"scripts": {
-		"build:code": "sheetbase-app-scripts build",
+		"build:code": "sheetbase-app-scripts build --param options",
 		"build:readme": "sheetbase-app-scripts readme",
 		"build:docs": "typedoc ./src --out ./docs --mode file --target ES6 --excludeExternals --excludeNotExported --ignoreCompilerErrors",
 		"build": "npm run build:code && npm run build:readme && npm run build:docs",
@@ -28,10 +27,8 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@sheetbase/app-scripts": "0.0.7",
+		"@sheetbase/app-scripts": "0.0.14",
+		"@sheetbase/core-server": "0.0.5",
 		"@types/google-apps-script": "0.0.28"
-	},
-	"peerDependencies": {
-		"@sheetbase/core-server": "0.0.4"
 	}
 }

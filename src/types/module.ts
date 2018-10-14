@@ -1,8 +1,8 @@
-import { IModule as ISheetbaseModule, IHttpRequest, IResponse, IHttpNext } from '@sheetbase/core-server';
-import { IHttpHandler } from '@sheetbase/core-server';
+import { IRouteRequest, IRouteResponse, IRouteNext, IRouteHandler } from '@sheetbase/core-server';
+import { IOptions } from './option';
 
 export interface IModule {
-    provide(Sheetbase: ISheetbaseModule): IModule;
+    init(options: IOptions);
     verify(key: string): boolean;
-    middleware(req: IHttpRequest, res: IResponse, next: IHttpNext): IHttpHandler;
+    middleware(req: IRouteRequest, res: IRouteResponse, next: IRouteNext): IRouteHandler;
 }

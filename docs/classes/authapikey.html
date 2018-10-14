@@ -80,18 +80,18 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="authapikey.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="authapikey.html#_sheetbase" class="tsd-kind-icon">_<wbr>Sheetbase</a></li>
-							</ul>
-						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authapikey.html#init" class="tsd-kind-icon">init</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authapikey.html#middleware" class="tsd-kind-icon">middleware</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authapikey.html#provide" class="tsd-kind-icon">provide</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="authapikey.html#verify" class="tsd-kind-icon">verify</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-class tsd-is-private"><a href="authapikey.html#_options" class="tsd-kind-icon">_options</a></li>
 							</ul>
 						</section>
 					</div>
@@ -103,84 +103,77 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Auth<wbr>Api<wbr>Key<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="authapikey.html" class="tsd-signature-type">AuthApiKey</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Auth<wbr>Api<wbr>Key<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/ioptions.html" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="authapikey.html" class="tsd-signature-type">AuthApiKey</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/f827245/src/auth-api-key.ts#L5">auth-api-key.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/cd98a5b/src/auth-api-key.ts#L8">auth-api-key.ts:8</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../interfaces/ioptions.html" class="tsd-signature-type">IOptions</a></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="authapikey.html" class="tsd-signature-type">AuthApiKey</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="_sheetbase" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _<wbr>Sheetbase</h3>
-					<div class="tsd-signature tsd-kind-icon">_<wbr>Sheetbase<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ISheetbaseModule</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/f827245/src/auth-api-key.ts#L5">auth-api-key.ts:5</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="middleware" class="tsd-anchor"></a>
-					<h3>middleware</h3>
+					<a name="init" class="tsd-anchor"></a>
+					<h3>init</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">middleware<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IHttpRequest</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IResponse</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IHttpNext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IHttpHandler</span></li>
+						<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/ioptions.html" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/imodule.html" class="tsd-signature-type">IModule</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/f827245/src/auth-api-key.ts#L22">auth-api-key.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/cd98a5b/src/auth-api-key.ts#L14">auth-api-key.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>req: <span class="tsd-signature-type">IHttpRequest</span></h5>
-								</li>
-								<li>
-									<h5>res: <span class="tsd-signature-type">IResponse</span></h5>
-								</li>
-								<li>
-									<h5>next: <span class="tsd-signature-type">IHttpNext</span></h5>
+									<h5>options: <a href="../interfaces/ioptions.html" class="tsd-signature-type">IOptions</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IHttpHandler</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/imodule.html" class="tsd-signature-type">IModule</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="provide" class="tsd-anchor"></a>
-					<h3>provide</h3>
+					<a name="middleware" class="tsd-anchor"></a>
+					<h3>middleware</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">provide<span class="tsd-signature-symbol">(</span>Sheetbase<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ISheetbaseModule</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+						<li class="tsd-signature tsd-kind-icon">middleware<span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRouteRequest</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRouteResponse</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRouteNext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IRouteHandler</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/f827245/src/auth-api-key.ts#L13">auth-api-key.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/cd98a5b/src/auth-api-key.ts#L23">auth-api-key.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>Sheetbase: <span class="tsd-signature-type">ISheetbaseModule</span></h5>
+									<h5>req: <span class="tsd-signature-type">IRouteRequest</span></h5>
+								</li>
+								<li>
+									<h5>res: <span class="tsd-signature-type">IRouteResponse</span></h5>
+								</li>
+								<li>
+									<h5>next: <span class="tsd-signature-type">IRouteNext</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IRouteHandler</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -194,7 +187,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/f827245/src/auth-api-key.ts#L18">auth-api-key.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/cd98a5b/src/auth-api-key.ts#L19">auth-api-key.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -206,6 +199,29 @@
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-class tsd-is-private">
+					<a name="_options" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _options</h3>
+					<div class="tsd-signature tsd-kind-icon">_options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/cd98a5b/src/auth-api-key.ts#L6">auth-api-key.ts:6</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="_options.apikey" class="tsd-anchor"></a>
+						<h3>api<wbr>Key</h3>
+						<div class="tsd-signature tsd-kind-icon">api<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/Sheetbase/module-auth-api-key-server/blob/cd98a5b/src/auth-api-key.ts#L7">auth-api-key.ts:7</a></li>
+							</ul>
+						</aside>
+					</section>
 				</section>
 			</section>
 		</div>
@@ -227,17 +243,17 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="authapikey.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="authapikey.html#_sheetbase" class="tsd-kind-icon">_<wbr>Sheetbase</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="authapikey.html#init" class="tsd-kind-icon">init</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="authapikey.html#middleware" class="tsd-kind-icon">middleware</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="authapikey.html#provide" class="tsd-kind-icon">provide</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="authapikey.html#verify" class="tsd-kind-icon">verify</a>
+							</li>
+							<li class=" tsd-kind-object-literal tsd-parent-kind-class tsd-is-private">
+								<a href="authapikey.html#_options" class="tsd-kind-icon">_options</a>
 							</li>
 						</ul>
 					</li>
@@ -246,8 +262,17 @@
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/imodule.html" class="tsd-kind-icon">IModule</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ioptions.html" class="tsd-kind-icon">IOptions</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#authapikeymodule" class="tsd-kind-icon">Auth<wbr>Api<wbr>Key<wbr>Module</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#moduleexports" class="tsd-kind-icon">module<wbr>Exports</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#options" class="tsd-kind-icon">options</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../globals.html#example1" class="tsd-kind-icon">example1</a>

@@ -2,11 +2,11 @@
 
 Sheetbase middleware to authorize with the API Key.
 
-<!-- <content> -->
+<!-- <block:header> -->
 
 [![License][license_badge]][license_url] [![clasp][clasp_badge]][clasp_url] [![Support me on Patreon][patreon_badge]][patreon_url] [![PayPal][paypal_donate_badge]][paypal_donate_url] [![Ask me anything][ask_me_badge]][ask_me_url]
 
-<!-- </content> -->
+<!-- </block:header> -->
 
 ## Install
 
@@ -20,12 +20,6 @@ Sheetbase middleware to authorize with the API Key.
 
 ```ts
 function example1(): void {
-  // add this line when use the library
-  AuthApiKey.provide(Sheetbase);
-
-  // for demonstration
-  const apiKey = "my_api_key";
-  Sheetbase.Config.set({ apiKey });
   // verify
   const aye: boolean = AuthApiKey.verify(apiKey);
   const nay: boolean = AuthApiKey.verify("not_my_api_key");
@@ -34,15 +28,15 @@ function example1(): void {
 }
 
 function example2(): void {
-  // add this line when use the library
-  AuthApiKey.provide(Sheetbase);
-
-  // using with Sheetbase Router
-  Sheetbase.Router.get("/auth", AuthApiKey.middleware, (req, res) => {
-    res.send("I have it!");
-  });
-  // or
-  Sheetbase.Router.use(AuthApiKey.middleware);
+  Logger.log("Not executable example.");
+  /**
+ * using with Sheetbase Router
+ * 
+    Sheetbase.Router.get('/auth', AuthApiKey.middleware, (req, res) => {
+        res.send('I have it!');
+    });
+ *
+*/
 }
 ```
 
@@ -52,15 +46,19 @@ See the docs: https://sheetbase.github.io/module-auth-api-key-server
 
 ## API
 
-An overview of the API, for detail please refer [the documentation](https://sheetbase.github.io/module-auth-api-key-server)
+An overview of the API, for detail please refer [the documentation](https://sheetbase.github.io/module-auth-api-key-server).
 
 ### AuthApiKey
 
 ```ts
 export interface IModule {
-  provide(Sheetbase: ISheetbaseModule): IModule;
+  init(options: IOptions);
   verify(key: string): boolean;
-  middleware(req: IHttpRequest, res: IResponse, next: IHttpNext): IHttpHandler;
+  middleware(
+    req: IRouteRequest,
+    res: IRouteResponse,
+    next: IRouteNext
+  ): IRouteHandler;
 }
 ```
 
@@ -68,7 +66,7 @@ export interface IModule {
 
 **@sheetbase/auth-api-key-server** is released under the [MIT](https://github.com/sheetbase/module-auth-api-key-server/blob/master/LICENSE) license.
 
-<!-- <footer> -->
+<!-- <block:footer> -->
 
 [license_badge]: https://img.shields.io/github/license/mashape/apistatus.svg
 [license_url]: https://github.com/sheetbase/module-auth-api-key-server/blob/master/LICENSE
@@ -81,4 +79,4 @@ export interface IModule {
 [ask_me_badge]: https://img.shields.io/badge/ask/me-anything-1abc9c.svg
 [ask_me_url]: https://m.me/sheetbase
 
-<!-- </footer> -->
+<!-- </block:footer> -->
