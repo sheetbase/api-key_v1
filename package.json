@@ -20,10 +20,10 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/sheetbase/module-auth-api-key-server.git"
+		"url": "https://github.com/sheetbase/auth-api-key-server.git"
 	},
 	"bugs": {
-		"url": "https://github.com/sheetbase/module-auth-api-key-server/issues"
+		"url": "https://github.com/sheetbase/auth-api-key-server/issues"
 	},
 	"dependencies": {},
 	"devDependencies": {
