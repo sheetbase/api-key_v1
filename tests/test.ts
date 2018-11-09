@@ -1,5 +1,11 @@
 /* tslint:disable:no-unused-expression */
-import { RouteRequest, RouteResponse, RouteNext, Response } from '@sheetbase/core-server';
+import {
+    RouteRequest,
+    RouteResponse,
+    RouteNext,
+    OptionService,
+    ResponseService,
+} from '@sheetbase/core-server';
 
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
@@ -12,7 +18,9 @@ const req: RouteRequest = {
     query: {}, body: {},
 };
 
-const res: RouteResponse = Response;
+const res: RouteResponse = new ResponseService(
+    new OptionService(null),
+);
 res.html = (content): any => content; // override #html
 
 const next: RouteNext = () => null;
