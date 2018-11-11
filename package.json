@@ -1,6 +1,6 @@
 {
    "name": "@sheetbase/auth-api-key-server",
-   "version": "0.0.6",
+   "version": "0.0.7",
    "description": "Sheetbase middleware to authorize with the API Key.",
    "author": "Sheetbase",
    "homepage": "https://sheetbase.net",
