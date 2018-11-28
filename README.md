@@ -37,22 +37,26 @@ const AuthApiKey = AuthApiKeyModule.AuthApiKey;
 import * as Sheetbase from "@sheetbase/core-server";
 import * as AuthApiKey from "./public_api";
 
-const apiKey = "my_api_key";
+const key = "my_api_key";
+
+function load_() {
+  return Sheetbase.sheetbase();
+}
 
 export function example1(): void {
-  Sheetbase.Router.get(
-    "/auth",
-    AuthApiKey.middleware({ apiKey }),
-    (req, res) => {
-      res.send("I have it!");
-    }
-  );
+  const Sheetbase = load_();
+
+  Sheetbase.Router.get("/auth", AuthApiKey.middleware({ key }), (req, res) => {
+    res.send("I have it!");
+  });
 
   Logger.log("[Not executable] Per route middleware.");
 }
 
 export function example2(): void {
-  Sheetbase.Router.use(AuthApiKey.middleware({ apiKey }));
+  const Sheetbase = load_();
+
+  Sheetbase.Router.use(AuthApiKey.middleware({ key }));
 
   Sheetbase.Router.get("/auth", (req, res) => {
     res.send("I have it!");

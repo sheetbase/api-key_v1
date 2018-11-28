@@ -1,6 +1,6 @@
 {
    "name": "@sheetbase/auth-api-key-server",
-   "version": "0.0.9",
+   "version": "0.0.10",
    "description": "Sheetbase middleware to authorize with the API Key.",
    "author": "Sheetbase",
    "homepage": "https://sheetbase.net",
@@ -38,7 +38,7 @@
    },
    "dependencies": {},
    "peerDependencies": {
-      "@sheetbase/core-server": "0.0.13"
+      "@sheetbase/core-server": "0.0.14"
    },
    "devDependencies": {
       "@sheetbase/app-scripts": "^0.0.28",
