@@ -52,7 +52,7 @@ resetRouterObjects();
 /**
  * test start
  */
-describe('AuthApiKey module (single key)', () => {
+describe('ApiKey module (single key)', () => {
 
     const Middleware = middleware({ key });
 
@@ -99,7 +99,7 @@ describe('AuthApiKey module (single key)', () => {
     });
 });
 
-describe('AuthApiKey module (multiple api keys #1)', () => {
+describe('ApiKey module (multiple api keys #1)', () => {
 
     const Middleware = middleware({ apiKeys: apiKeys1 });
 
@@ -146,7 +146,7 @@ describe('AuthApiKey module (multiple api keys #1)', () => {
     });
 });
 
-describe('AuthApiKey module (multiple api keys #2)', () => {
+describe('ApiKey module (multiple api keys #2)', () => {
 
     const Middleware = middleware({ apiKeys: apiKeys2 });
 
@@ -193,7 +193,7 @@ describe('AuthApiKey module (multiple api keys #2)', () => {
     });
 });
 
-describe('AuthApiKey module (other options)', () => {
+describe('ApiKey module (other options)', () => {
 
     it('should use custom failure', () => {
         const Middleware = middleware({

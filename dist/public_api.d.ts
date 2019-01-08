@@ -1,2 +1,2 @@
-export * from './lib/auth-api-key';
+export * from './lib/api-key';
 export * from './lib/types';

@@ -1,5 +1,5 @@
 import * as Sheetbase from '@sheetbase/core-server';
-import * as AuthApiKey from './public_api';
+import * as ApiKey from './public_api';
 
 const key = 'my_api_key';
 
@@ -10,7 +10,7 @@ function load_() {
 export function example1(): void {
     const Sheetbase = load_();
 
-    Sheetbase.Router.get('/auth', AuthApiKey.middleware({ key }),
+    Sheetbase.Router.get('/auth', ApiKey.middleware({ key }),
     (req, res) => {
         res.send('I have it!');
     });
@@ -22,7 +22,7 @@ export function example2(): void {
     const Sheetbase = load_();
 
     Sheetbase.Router.use(
-        AuthApiKey.middleware({ key }),
+        ApiKey.middleware({ key }),
     );
 
     Sheetbase.Router.get('/auth', (req, res) => {
