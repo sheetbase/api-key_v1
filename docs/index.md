@@ -1,3 +1,3 @@
-# @sheetbase/api-key-server
+# @sheetbase/api-key
 
 - [API Reference](https://sheetbase.github.io/api-key-server/api)

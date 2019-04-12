@@ -1,4 +1,4 @@
-import { RouteRequest, RouteResponse, RouteNext, RouteHandler } from '@sheetbase/core-server';
+import { RouteRequest, RouteResponse, RouteNext, RouteHandler } from '@sheetbase/server';
 
 import { Options, APIKey } from './types';
 

@@ -5,7 +5,7 @@ import {
     RouteNext,
     OptionService,
     ResponseService,
-} from '@sheetbase/core-server';
+} from '@sheetbase/server';
 
 import { expect } from 'chai';
 import { describe, it } from 'mocha';

@@ -1,4 +1,4 @@
-import { RouteRequest, RouteResponse } from '@sheetbase/core-server';
+import { RouteRequest, RouteResponse } from '@sheetbase/server';
 
 export interface Options {
     key?: string;

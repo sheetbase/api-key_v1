@@ -1,4 +1,4 @@
-# Sheetbase Module: @sheetbase/api-key-server
+# Sheetbase Module: @sheetbase/api-key
 
 Sheetbase middleware to authorize with the API Key.
 
@@ -10,10 +10,10 @@ Sheetbase middleware to authorize with the API Key.
 
 ## Install
 
-Using npm: `npm install --save @sheetbase/api-key-server`
+Using npm: `npm install --save @sheetbase/api-key`
 
 ```ts
-import * as ApiKey from "@sheetbase/api-key-server";
+import * as ApiKey from "@sheetbase/api-key";
 ```
 
 As a library: `1NulS_tPHLm401X7Km_ONKgtRK-VHnC5ODmNZ1sMt0QgXuDgtffxJ-Zzv`
@@ -31,48 +31,9 @@ const ApiKey = ApiKeyModule.ApiKey;
 
 - API reference: https://sheetbase.github.io/api-key-server/api
 
-### Examples
-
-```ts
-import * as Sheetbase from "@sheetbase/core-server";
-import * as ApiKey from "./public_api";
-
-const key = "my_api_key";
-
-function load_() {
-  return Sheetbase.sheetbase();
-}
-
-export function example1(): void {
-  const Sheetbase = load_();
-
-  Sheetbase.Router.get("/auth", ApiKey.middleware({ key }), (req, res) => {
-    res.send("I have it!");
-  });
-
-  Logger.log("[Not executable] Per route middleware.");
-}
-
-export function example2(): void {
-  const Sheetbase = load_();
-
-  Sheetbase.Router.use(ApiKey.middleware({ key }));
-
-  Sheetbase.Router.get("/auth", (req, res) => {
-    res.send("I have it!");
-  });
-
-  Sheetbase.Router.post("/auth", (req, res) => {
-    res.send("I have it!");
-  });
-
-  Logger.log("[Not executable] Global use middleware.");
-}
-```
-
 ## License
 
-**@sheetbase/api-key-server** is released under the [MIT](https://github.com/sheetbase/api-key-server/blob/master/LICENSE) license.
+**@sheetbase/api-key** is released under the [MIT](https://github.com/sheetbase/api-key-server/blob/master/LICENSE) license.
 
 <!-- <block:footer> -->
 
