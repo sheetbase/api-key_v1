@@ -4,7 +4,7 @@ Sheetbase middleware to authorize with the API Key.
 
 <!-- <block:header> -->
 
-[![Build Status](https://travis-ci.com/sheetbase/api-key-server.svg?branch=master)](https://travis-ci.com/sheetbase/api-key-server) [![Coverage Status](https://coveralls.io/repos/github/sheetbase/api-key-server/badge.svg?branch=master)](https://coveralls.io/github/sheetbase/api-key-server?branch=master) [![NPM](https://img.shields.io/npm/v/@sheetbase/api-key-server.svg)](https://www.npmjs.com/package/@sheetbase/api-key-server) [![License][license_badge]][license_url] [![clasp][clasp_badge]][clasp_url] [![Support me on Patreon][patreon_badge]][patreon_url] [![PayPal][paypal_donate_badge]][paypal_donate_url] [![Ask me anything][ask_me_badge]][ask_me_url]
+[![Build Status](https://travis-ci.com/sheetbase/api-key.svg?branch=master)](https://travis-ci.com/sheetbase/api-key) [![Coverage Status](https://coveralls.io/repos/github/sheetbase/api-key/badge.svg?branch=master)](https://coveralls.io/github/sheetbase/api-key?branch=master) [![NPM](https://img.shields.io/npm/v/@sheetbase/api-key.svg)](https://www.npmjs.com/package/@sheetbase/api-key) [![License][license_badge]][license_url] [![clasp][clasp_badge]][clasp_url] [![Support me on Patreon][patreon_badge]][patreon_url] [![PayPal][paypal_donate_badge]][paypal_donate_url] [![Ask me anything][ask_me_badge]][ask_me_url]
 
 <!-- </block:header> -->
 
@@ -27,18 +27,18 @@ const ApiKey = ApiKeyModule.ApiKey;
 
 ## Usage
 
-- Docs homepage: https://sheetbase.github.io/api-key-server
+- Docs homepage: https://sheetbase.github.io/api-key
 
-- API reference: https://sheetbase.github.io/api-key-server/api
+- API reference: https://sheetbase.github.io/api-key/api
 
 ## License
 
-**@sheetbase/api-key** is released under the [MIT](https://github.com/sheetbase/api-key-server/blob/master/LICENSE) license.
+**@sheetbase/api-key** is released under the [MIT](https://github.com/sheetbase/api-key/blob/master/LICENSE) license.
 
 <!-- <block:footer> -->
 
 [license_badge]: https://img.shields.io/github/license/mashape/apistatus.svg
-[license_url]: https://github.com/sheetbase/api-key-server/blob/master/LICENSE
+[license_url]: https://github.com/sheetbase/api-key/blob/master/LICENSE
 [clasp_badge]: https://img.shields.io/badge/built%20with-clasp-4285f4.svg
 [clasp_url]: https://github.com/google/clasp
 [patreon_badge]: https://lamnhan.github.io/assets/images/badges/patreon.svg
