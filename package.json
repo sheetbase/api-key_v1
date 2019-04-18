@@ -39,9 +39,7 @@
    "bugs": {
       "url": "https://github.com/sheetbase/api-key/issues"
    },
-   "dependencies": {
-      "@sheetbase/server": "^1.0.0"
-   },
+   "dependencies": {},
    "peerDependencies": {
       "@sheetbase/server": "^1.0.0"
    },
