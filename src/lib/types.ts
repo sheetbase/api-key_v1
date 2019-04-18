@@ -12,6 +12,6 @@ export interface APIKey {
     id?: string;
     title?: string;
     description?: string;
-    createdAt?: number;
+    createdAt?: string | number;
     [k: string]: any;
 }
