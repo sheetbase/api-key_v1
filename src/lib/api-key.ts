@@ -25,7 +25,7 @@ export function middleware(options: Options = {}): RouteHandler {
         // 'apiKeys/apiKey' = objects/object (APIKey interface)
         // 'key' = string
         // get key from the request
-        const key = req.body.apiKey || req.query.apiKey;
+        const key = req.body.key || req.query.key;
         const apiKeys = loadAPIKeys(options);
         const apiKey = key ? apiKeys[key] : null;
 

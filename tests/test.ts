@@ -78,21 +78,21 @@ describe('ApiKey module (single key)', () => {
     });
 
     it('should not pass (wrong key)', () => {
-        req.query.apiKey = 'wrong-key';
+        req.query.key = 'wrong-key';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal('errors/403');
     });
 
     it('should pass (api key in query)', () => {
-        req.query.apiKey = key;
+        req.query.key = key;
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
     });
 
     it('should pass (api key in body)', () => {
-        req.body.apiKey = key;
+        req.body.key = key;
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
@@ -125,21 +125,21 @@ describe('ApiKey module (multiple api keys #1)', () => {
     });
 
     it('should not pass (wrong key)', () => {
-        req.query.apiKey = 'key0';
+        req.query.key = 'key0';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal('errors/403');
     });
 
     it('should pass (api key in query)', () => {
-        req.query.apiKey = 'key1';
+        req.query.key = 'key1';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
     });
 
     it('should pass (api key in body)', () => {
-        req.body.apiKey = 'key1';
+        req.body.key = 'key1';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
@@ -172,21 +172,21 @@ describe('ApiKey module (multiple api keys #2)', () => {
     });
 
     it('should not pass (wrong key)', () => {
-        req.query.apiKey = 'key0';
+        req.query.key = 'key0';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal('errors/403');
     });
 
     it('should pass (api key in query)', () => {
-        req.query.apiKey = 'key2';
+        req.query.key = 'key2';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
     });
 
     it('should pass (api key in body)', () => {
-        req.body.apiKey = 'key2';
+        req.body.key = 'key2';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
@@ -214,7 +214,7 @@ describe('ApiKey module (other options)', () => {
                 // do something here
             },
         });
-        req.query.apiKey = key;
+        req.query.key = key;
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
@@ -229,7 +229,7 @@ describe('ApiKey module (other options)', () => {
                 }
             },
         });
-        req.query.apiKey = key;
+        req.query.key = key;
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
@@ -244,7 +244,7 @@ describe('ApiKey module (other options)', () => {
                 }
             },
         });
-        req.query.apiKey = 'key1';
+        req.query.key = 'key1';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
@@ -263,7 +263,7 @@ describe('ApiKey module (other options)', () => {
                 }
             },
         });
-        req.query.apiKey = 'key2';
+        req.query.key = 'key2';
 
         const result = Middleware(req, res, next);
         expect(result).to.equal(true);
